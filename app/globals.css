@@ -249,12 +249,12 @@ body {
 .type-line {
   display: inline-block;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: normal;
   max-width: 100%;
   border-right: 2px solid var(--color-primary);
   padding-right: 2px;
   animation:
-    type-in 2.2s steps(42, end) 0.4s 1 both,
+    type-in 2.2s steps(72, end) 0.4s 1 both,
     caret-blink 0.9s steps(1) 2.6s infinite;
 }
 
