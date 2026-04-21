@@ -1,8 +1,26 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Blog — ForgeUp",
+  description: "Training philosophy, coaching insights, and Milo updates from the ForgeUp team.",
+  openGraph: {
+    title: "ForgeUp Blog",
+    description: "Training philosophy, coaching insights, and Milo updates.",
+    url: "https://forgeup.app/blog",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ForgeUp Blog",
+    description: "Training philosophy, coaching insights, and Milo updates.",
+  },
+  alternates: {
+    canonical: "https://forgeup.app/blog",
+  },
+};
 
 interface BlogPost {
   slug: string;

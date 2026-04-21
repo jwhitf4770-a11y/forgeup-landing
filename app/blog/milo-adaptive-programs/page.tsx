@@ -1,12 +1,57 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 
+export const metadata: Metadata = {
+  title: "How Milo Adapts Your Program in Real Time — ForgeUp",
+  description: "Your program shouldn't be static. When life changes, your training should too. Here's how Milo rewrites your plan before you leave the couch.",
+  openGraph: {
+    title: "How Milo Adapts Your Program in Real Time",
+    description: "Your program shouldn't be static. When life changes, your training should too.",
+    url: "https://forgeup.app/blog/milo-adaptive-programs",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "How Milo Adapts Your Program in Real Time",
+    description: "Your program shouldn't be static. When life changes, your training should too.",
+  },
+  alternates: {
+    canonical: "https://forgeup.app/blog/milo-adaptive-programs",
+  },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: "How Milo Adapts Your Program in Real Time",
+  description: "Your program shouldn't be static. When life changes, your training should too. Here's how Milo rewrites your plan before you leave the couch.",
+  image: "https://forgeup.app/forgeup-logo.png",
+  datePublished: "2026-04-18",
+  author: {
+    "@type": "Organization",
+    name: "ForgeUp",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "ForgeUp",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://forgeup.app/forgeup-logo.png",
+    },
+  },
+};
+
 export default function BlogPost() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleSchema),
+        }}
+      />
       <Nav />
       <article className="px-6 py-16 max-w-2xl mx-auto">
         <Link href="/blog" className="text-sm text-[var(--color-primary)] hover:text-[var(--color-primary)]/80 mb-6 inline-block">

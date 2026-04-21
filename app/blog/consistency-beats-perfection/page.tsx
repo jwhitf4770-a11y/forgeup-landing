@@ -1,12 +1,57 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 
+export const metadata: Metadata = {
+  title: "Consistency Beats Perfect Programs — ForgeUp",
+  description: "The lifters who make progress aren't the ones with perfect programs. They're the ones who show up. Here's what the data reveals.",
+  openGraph: {
+    title: "Consistency Beats Perfect Programs",
+    description: "The lifters who make progress are the ones who show up. Here's what the data reveals.",
+    url: "https://forgeup.app/blog/consistency-beats-perfection",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Consistency Beats Perfect Programs",
+    description: "The lifters who make progress are the ones who show up.",
+  },
+  alternates: {
+    canonical: "https://forgeup.app/blog/consistency-beats-perfection",
+  },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: "Consistency Beats Perfect Programs",
+  description: "The lifters who make progress aren't the ones with perfect programs. They're the ones who show up. Here's what the data reveals.",
+  image: "https://forgeup.app/forgeup-logo.png",
+  datePublished: "2026-04-12",
+  author: {
+    "@type": "Organization",
+    name: "ForgeUp",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "ForgeUp",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://forgeup.app/forgeup-logo.png",
+    },
+  },
+};
+
 export default function BlogPost() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleSchema),
+        }}
+      />
       <Nav />
       <article className="px-6 py-16 max-w-2xl mx-auto">
         <Link href="/blog" className="text-sm text-[var(--color-primary)] hover:text-[var(--color-primary)]/80 mb-6 inline-block">

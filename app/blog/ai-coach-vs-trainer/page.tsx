@@ -1,12 +1,57 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 
+export const metadata: Metadata = {
+  title: "AI Coach ≠ Trainer Replacement — ForgeUp",
+  description: "Milo isn't here to replace great trainers. For athletes without access to coaching, Milo is the voice in your ear pushing you forward.",
+  openGraph: {
+    title: "AI Coach ≠ Trainer Replacement",
+    description: "Milo isn't here to replace great trainers. For athletes without access to coaching, Milo is the voice in your ear.",
+    url: "https://forgeup.app/blog/ai-coach-vs-trainer",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Coach ≠ Trainer Replacement",
+    description: "Milo isn't here to replace great trainers.",
+  },
+  alternates: {
+    canonical: "https://forgeup.app/blog/ai-coach-vs-trainer",
+  },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: "AI Coach ≠ Trainer Replacement",
+  description: "Milo isn't here to replace great trainers. For athletes without access to coaching, Milo is the voice in your ear pushing you forward.",
+  image: "https://forgeup.app/forgeup-logo.png",
+  datePublished: "2026-04-16",
+  author: {
+    "@type": "Organization",
+    name: "ForgeUp",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "ForgeUp",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://forgeup.app/forgeup-logo.png",
+    },
+  },
+};
+
 export default function BlogPost() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleSchema),
+        }}
+      />
       <Nav />
       <article className="px-6 py-16 max-w-2xl mx-auto">
         <Link href="/blog" className="text-sm text-[var(--color-primary)] hover:text-[var(--color-primary)]/80 mb-6 inline-block">
