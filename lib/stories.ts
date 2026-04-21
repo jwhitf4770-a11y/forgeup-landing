@@ -342,9 +342,12 @@ export const stories: Record<string, StoryData> = {
       "Sophie stopped following box programming blindly and built her own lifting schedule around their metcons. In 6 weeks, her squat jumped 25 pounds, her deadlift 35. The key wasn't doing more—it was knowing which days to lift heavy and which days to compete. She stayed connected to her gym's community while getting stronger on her own timeline.",
   },
 
-  "derek-l-meet-prep": {
-    slug: "derek-l-meet-prep",
-    archetype: "The Meet Competitor",
+};
+
+export const competitors: Record<string, StoryData> = {
+  "derek-l-powerlifting-meet": {
+    slug: "derek-l-powerlifting-meet",
+    archetype: "Powerlifting Meet",
     name: "Derek L.",
     age: 32,
     location: "Denver, CO",
@@ -383,12 +386,188 @@ export const stories: Record<string, StoryData> = {
     outcome:
       "Derek followed the peaking block. Dropped volume, kept intensity, added sleep and food. Meet day: squat 375 (PR), bench 265 (PR), deadlift 440 (matching PR). Total 1080—he didn't hit 1150. But he hit 1065 with form so crisp he knew he had more in the tank. Two months later, a second meet: 1185. Peaking works. He just needed the right arc.",
   },
+
+  "priya-s-spartan-race": {
+    slug: "priya-s-spartan-race",
+    archetype: "Spartan Race",
+    name: "Priya S.",
+    age: 26,
+    location: "Denver, CO",
+    discipline: "Obstacle Racing",
+    frequency: "4 days/week",
+    imageUrl: "https://images.pexels.com/photos/33638482/pexels-photo-33638482.jpeg",
+    pullQuote: "I signed up for a race with six weeks left. Milo didn't start over. He redirected.",
+    problem:
+      "Priya signed up for a Spartan Sprint with six weeks to go. She'd been doing general strength training—compound lifts, cardio. It's solid. But a Spartan is different. Carries, holds, obstacles, and short-burst conditioning. Her program was good for something else entirely.",
+    conversation: [
+      {
+        from: "user",
+        text: "Signed up for Spartan Sprint. Six weeks. Doing general strength training.",
+      },
+      {
+        from: "milo",
+        text: "Current program?",
+      },
+      {
+        from: "user",
+        text: "Three lifting days, one cardio. Compounds mainly.",
+      },
+      {
+        from: "milo",
+        text: "Keep squats, deadlifts, pulls. Add carries, farmer walks, second conditioning day. Week four we do a race simulation.",
+      },
+      {
+        from: "user",
+        text: "Start over from scratch?",
+      },
+      {
+        from: "milo",
+        text: "No. You have the base. We're just pointing it at obstacles.",
+      },
+    ],
+    outcome:
+      "Priya finished the Spartan with a respectable time and zero pain. She had the carry strength. She had the grip. She had the conditioning. She just needed the programming redirected. That's the difference between a program and adaptive coaching.",
+  },
+
+  "amara-k-weightlifting": {
+    slug: "amara-k-weightlifting",
+    archetype: "Weightlifting Competition",
+    name: "Amara K.",
+    age: 27,
+    location: "Los Angeles, CA",
+    discipline: "Olympic Weightlifting",
+    frequency: "5 days/week",
+    imageUrl: "https://images.pexels.com/photos/36389472/pexels-photo-36389472.jpeg",
+    pullQuote: "Six months to nationals. My snatch was stuck. Turns out my shoulders were exhausted.",
+    problem:
+      "Amara trains Olympic weightlifting. Six months to nationals. Her snatch hit a wall at 235. Her coach said train harder. But harder wasn't unlocking it—she was compensating, rounded-back position, missing overhead stability. More technique work wasn't the answer. Recovery and shoulder stability were.",
+    conversation: [
+      {
+        from: "user",
+        text: "Snatch stuck at 235 for 4 weeks. Nationals in 6 months. What am I missing?",
+      },
+      {
+        from: "milo",
+        text: "Your current overhead position—are you locking out confidently?",
+      },
+      {
+        from: "user",
+        text: "Nope. I'm dropping under fine but the lockout is shaky. Rounded back.",
+      },
+      {
+        from: "milo",
+        text: "You're compensating because your shoulders are fatigued. You're doing too much pulling volume. We're cutting pulls by 40%, adding shoulder stability work, and your snatch will jump.",
+      },
+      {
+        from: "user",
+        text: "But won't my technique suffer if I'm doing less?",
+      },
+      {
+        from: "milo",
+        text: "Your technique will improve. You can't have good technique on fatigued shoulders.",
+      },
+    ],
+    outcome:
+      "Amara dropped 40% of her pulling volume and added 15 minutes of shoulder stability three times per week. Week 3: snatched 245. Week 7: 255. Week 12: 265 (PR). She got to nationals feeling fresh, not ground down. The PR came from doing less, not more.",
+  },
+
+  "lucas-h-strongman": {
+    slug: "lucas-h-strongman",
+    archetype: "Strongman Competition",
+    name: "Lucas H.",
+    age: 36,
+    location: "Austin, TX",
+    discipline: "Strongman",
+    frequency: "4 days/week",
+    imageUrl: "https://images.pexels.com/photos/4720777/pexels-photo-4720777.jpeg",
+    pullQuote: "Strongman events require different strengths than raw lifts. Milo taught me which events to train heavy and which to train smart.",
+    problem:
+      "Lucas trains strongman. Three competitions in a year. Problem: he treats every event with equal intensity. Atlas stones, farmer carries, log press, yoke walk—all heavy, all the time. He's strong but inconsistent. Some events he owns, others he tanks.",
+    conversation: [
+      {
+        from: "user",
+        text: "Strongman contest in 10 weeks. I'm strong but inconsistent across events. Should I just do everything heavier?",
+      },
+      {
+        from: "milo",
+        text: "What are the five events?",
+      },
+      {
+        from: "user",
+        text: "Atlas stones, log press, farmer carry, yoke walk, deadlift.",
+      },
+      {
+        from: "milo",
+        text: "Atlas stones and log press are your weak events. Those get heavy singles once per week. Farmer and yoke are your strengths—those get volume and speed work instead. Deadlift is raw power—one heavy day.",
+      },
+      {
+        from: "user",
+        text: "So different training for weak vs. strong events?",
+      },
+      {
+        from: "milo",
+        text: "Your weak events need specificity to improve. Your strong events need conditioning to keep the advantage. Smart training beats just being strong.",
+      },
+    ],
+    outcome:
+      "Lucas split his training: heavy days for weak events, speed days for strong events. Contest day: atlas and log both improved (PRs). Farmer and yoke stayed dominant. He won. The difference was treating events differently instead of everything the same.",
+  },
+
+  "maya-b-bodybuilding": {
+    slug: "maya-b-bodybuilding",
+    archetype: "Bodybuilding Stage",
+    name: "Maya B.",
+    age: 30,
+    location: "Los Angeles, CA",
+    discipline: "Bodybuilding",
+    frequency: "5 days/week",
+    imageUrl: "https://images.pexels.com/photos/36917074/pexels-photo-36917074.jpeg",
+    pullQuote: "Twenty weeks to stage. I thought harder training would bring better condition. Milo said condition lives in the kitchen.",
+    problem:
+      "Maya is prepping for her second bodybuilding show. Twenty weeks out. She's doing double training days trying to bring condition. But conditioning is driven by diet, not volume. She's burning out instead of conditioning.",
+    conversation: [
+      {
+        from: "user",
+        text: "Twenty weeks to stage. Want hard conditioning. Should I add more cardio and drop calories faster?",
+      },
+      {
+        from: "milo",
+        text: "What's your current plan?",
+      },
+      {
+        from: "user",
+        text: "Double training days, dropping 500 cals per week. Trying to bring condition early.",
+      },
+      {
+        from: "milo",
+        text: "Wrong sequence. Your training stays the same. Your calories drop slower—200 per week. Last four weeks we get aggressive with cardio. You preserve muscle and still condition. Rushing burns muscle.",
+      },
+      {
+        from: "user",
+        text: "But I want to be really dry..",
+      },
+      {
+        from: "milo",
+        text: "Dry comes from time and consistency. You're 20 weeks out. There's no urgency. Slow and steady wins stage.",
+      },
+    ],
+    outcome:
+      "Maya slowed her deficit, kept training stable, ramped cardio in weeks 16-4. She hit stage lean, full, and hard. Second show was better condition than her first. The secret wasn't more work—it was the right timing.",
+  },
 };
 
 export function getStoryBySlug(slug: string): StoryData | undefined {
   return stories[slug];
 }
 
+export function getCompetitorBySlug(slug: string): StoryData | undefined {
+  return competitors[slug];
+}
+
 export function getAllStorySlugs(): string[] {
   return Object.keys(stories);
+}
+
+export function getAllCompetitorSlugs(): string[] {
+  return Object.keys(competitors);
 }

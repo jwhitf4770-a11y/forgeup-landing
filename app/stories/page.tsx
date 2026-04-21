@@ -2,12 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
-import { stories } from "@/lib/stories";
+import { stories, competitors } from "@/lib/stories";
 
 export const metadata = {
   title: "User Stories — Real Athletes, Real Coaching | ForgeUp",
   description:
-    "See how Milo coaches different athletes. From returning lifters to polymath athletes, find your archetype.",
+    "See how Milo coaches different athletes. From returning lifters to competition prep, find your story.",
   openGraph: {
     title: "User Stories — Real Athletes, Real Coaching",
     description:
@@ -16,8 +16,64 @@ export const metadata = {
   },
 };
 
+function StoryCard({ story }: { story: typeof stories[string] }) {
+  return (
+    <div key={story.slug} className="card overflow-hidden flex flex-col">
+      <div className="relative h-40 bg-gradient-to-br from-[var(--color-primary)]/20 to-[var(--color-surface)] flex items-center justify-center overflow-hidden">
+        {story.imageUrl ? (
+          <>
+            <Image
+              src={story.imageUrl}
+              alt={story.name}
+              fill
+              className="object-cover"
+              unoptimized
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+          </>
+        ) : (
+          <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary)]/60 flex items-center justify-center">
+            <span className="text-4xl font-bold text-white opacity-20">
+              {story.name
+                .split(" ")
+                .map((n) => n[0])
+                .join("")}
+            </span>
+          </div>
+        )}
+      </div>
+
+      <div className="p-6 flex flex-col flex-grow">
+        <div className="mb-4">
+          <div className="text-xs uppercase tracking-wider text-[var(--color-primary)] font-semibold mb-2">
+            {story.archetype}
+          </div>
+          <h3 className="font-display text-2xl font-bold text-white mb-2">
+            {story.name}
+          </h3>
+          <p className="text-sm text-[var(--color-muted)]">
+            {story.age} • {story.location} • {story.discipline}
+          </p>
+        </div>
+
+        <blockquote className="text-[var(--color-text)] italic border-l-2 border-[var(--color-primary)]/50 pl-3 mb-6 flex-grow">
+          "{story.pullQuote}"
+        </blockquote>
+
+        <Link
+          href={`/stories/${story.slug}`}
+          className="btn-primary w-full text-center"
+        >
+          Read Their Story
+        </Link>
+      </div>
+    </div>
+  );
+}
+
 export default function StoriesIndex() {
   const storyList = Object.values(stories);
+  const competitorList = Object.values(competitors);
 
   return (
     <main>
@@ -35,63 +91,26 @@ export default function StoriesIndex() {
             </p>
           </div>
 
-          {/* Stories Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          {/* Main Stories Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-24">
             {storyList.map((story) => (
-              <div
-                key={story.slug}
-                className="card overflow-hidden flex flex-col"
-              >
-                <div className="relative h-40 bg-gradient-to-br from-[var(--color-primary)]/20 to-[var(--color-surface)] flex items-center justify-center overflow-hidden">
-                  {story.imageUrl ? (
-                    <>
-                      <Image
-                        src={story.imageUrl}
-                        alt={story.name}
-                        fill
-                        className="object-cover"
-                        unoptimized
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                    </>
-                  ) : (
-                    <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary)]/60 flex items-center justify-center">
-                      <span className="text-4xl font-bold text-white opacity-20">
-                        {story.name
-                          .split(" ")
-                          .map((n) => n[0])
-                          .join("")}
-                      </span>
-                    </div>
-                  )}
-                </div>
-
-                <div className="p-6 flex flex-col flex-grow">
-                  <div className="mb-4">
-                    <div className="text-xs uppercase tracking-wider text-[var(--color-primary)] font-semibold mb-2">
-                      {story.archetype}
-                    </div>
-                    <h3 className="font-display text-2xl font-bold text-white mb-2">
-                      {story.name}
-                    </h3>
-                    <p className="text-sm text-[var(--color-muted)]">
-                      {story.age} • {story.location} • {story.discipline}
-                    </p>
-                  </div>
-
-                  <blockquote className="text-[var(--color-text)] italic border-l-2 border-[var(--color-primary)]/50 pl-3 mb-6 flex-grow">
-                    "{story.pullQuote}"
-                  </blockquote>
-
-                  <Link
-                    href={`/stories/${story.slug}`}
-                    className="btn-primary w-full text-center"
-                  >
-                    Read Their Story
-                  </Link>
-                </div>
-              </div>
+              <StoryCard key={story.slug} story={story} />
             ))}
+          </div>
+
+          {/* Competitors Section */}
+          <div className="mb-16">
+            <h2 className="font-display text-4xl lg:text-5xl font-bold mb-4">
+              Prepare for Competition
+            </h2>
+            <p className="text-lg text-[var(--color-muted)] max-w-2xl mb-12">
+              Athletes training for specific events. Spartan races. Powerlifting meets. Marathons. See how Milo builds competition peaking plans.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {competitorList.map((competitor) => (
+                <StoryCard key={competitor.slug} story={competitor} />
+              ))}
+            </div>
           </div>
 
           {/* CTA */}
