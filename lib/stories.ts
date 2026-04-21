@@ -341,6 +341,48 @@ export const stories: Record<string, StoryData> = {
     outcome:
       "Sophie stopped following box programming blindly and built her own lifting schedule around their metcons. In 6 weeks, her squat jumped 25 pounds, her deadlift 35. The key wasn't doing more—it was knowing which days to lift heavy and which days to compete. She stayed connected to her gym's community while getting stronger on her own timeline.",
   },
+
+  "derek-l-meet-prep": {
+    slug: "derek-l-meet-prep",
+    archetype: "The Meet Competitor",
+    name: "Derek L.",
+    age: 32,
+    location: "Denver, CO",
+    discipline: "Powerlifting",
+    frequency: "5 days/week",
+    imageUrl: "https://images.pexels.com/photos/3837757/pexels-photo-3837757.jpeg",
+    pullQuote: "Eight weeks to my first meet. I thought more intensity was the answer. Milo said intensity plus rest was.",
+    problem:
+      "Derek signed up for his first powerlifting meet. Eight weeks out. His total is 1080—a respectable amateur lift. But he made a classic mistake: he started training harder, longer, more often. His squat and deadlift stayed flat. His bench got worse. He was burning out instead of peaking.",
+    conversation: [
+      {
+        from: "user",
+        text: "Meet's in 8 weeks. My total is 1080 but I want 1150. Should I do more volume?",
+      },
+      {
+        from: "milo",
+        text: "Peaking isn't volume. It's intensity + recovery. What's your current frequency?",
+      },
+      {
+        from: "user",
+        text: "Five days a week. Hitting each lift twice per week.",
+      },
+      {
+        from: "milo",
+        text: "In 8 weeks, you're dropping to three days. Heavy squat and deadlift once per week. Bench once. Everything else goes away.",
+      },
+      {
+        from: "user",
+        text: "Won't I get weak if I'm not training enough?",
+      },
+      {
+        from: "milo",
+        text: "You'll get strong. The last three weeks are deload—you'll hit openers and feel fast. You peak, not fade.",
+      },
+    ],
+    outcome:
+      "Derek followed the peaking block. Dropped volume, kept intensity, added sleep and food. Meet day: squat 375 (PR), bench 265 (PR), deadlift 440 (matching PR). Total 1080—he didn't hit 1150. But he hit 1065 with form so crisp he knew he had more in the tank. Two months later, a second meet: 1185. Peaking works. He just needed the right arc.",
+  },
 };
 
 export function getStoryBySlug(slug: string): StoryData | undefined {
