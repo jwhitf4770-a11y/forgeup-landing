@@ -301,6 +301,49 @@ export const stories: Record<string, StoryData> = {
   },
 };
 
+  "sophie-m-functional-athlete": {
+    slug: "sophie-m-functional-athlete",
+    archetype: "The Functional Athlete",
+    name: "Sophie M.",
+    age: 29,
+    location: "Seattle, WA",
+    discipline: "CrossFit/Functional",
+    frequency: "4 days/week",
+    imageUrl: "https://images.pexels.com/photos/14516256/pexels-photo-14516256.jpeg",
+    pullQuote: "I could do hard workouts. But Milo taught me that hard and smart are different.",
+    problem:
+      "Sophie loves the group energy of CrossFit but was chasing every workout without strategy. She'd PR one lift, then be too sore to lift properly for days. More volume wasn't the answer—intelligent sequencing was. Most coaches in her box said 'just do more.' Milo asked: what's the actual constraint?",
+    conversation: [
+      {
+        from: "user",
+        text: "I'm doing CrossFit 4 days a week. Big lifts are stalling but I'm always tired.",
+      },
+      {
+        from: "milo",
+        text: "How's your workout split? Are you doing heavy lifts most days?",
+      },
+      {
+        from: "user",
+        text: "Yeah, class programming is random. Some days squat, some days deadlift, some days both.",
+      },
+      {
+        from: "milo",
+        text: "That's the problem. Your CNS can't recover from competing stimulus. Heavy deadlifts and heavy squats same week tanks your strength. We're doing one heavy lift per week, not three.",
+      },
+      {
+        from: "user",
+        text: "But won't I lose fitness if I'm not doing everything?",
+      },
+      {
+        from: "milo",
+        text: "You'll gain strength. The box does volume for conditioning. We're stacking that with precision on your heavy day. More isn't always better—targeted is.",
+      },
+    ],
+    outcome:
+      "Sophie stopped following box programming blindly and built her own lifting schedule around their metcons. In 6 weeks, her squat jumped 25 pounds, her deadlift 35. The key wasn't doing more—it was knowing which days to lift heavy and which days to compete. She stayed connected to her gym's community while getting stronger on her own timeline.",
+  },
+};
+
 export function getStoryBySlug(slug: string): StoryData | undefined {
   return stories[slug];
 }
