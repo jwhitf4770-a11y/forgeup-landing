@@ -42,15 +42,28 @@ export default function StoriesIndex() {
                 key={story.slug}
                 className="card overflow-hidden flex flex-col"
               >
-                <div className="relative h-40 bg-gradient-to-br from-[var(--color-primary)]/20 to-[var(--color-surface)]">
-                  <Image
-                    src={story.imageUrl}
-                    alt={story.name}
-                    fill
-                    className="object-cover"
-                    unoptimized
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <div className="relative h-40 bg-gradient-to-br from-[var(--color-primary)]/20 to-[var(--color-surface)] flex items-center justify-center overflow-hidden">
+                  {story.imageUrl ? (
+                    <>
+                      <Image
+                        src={story.imageUrl}
+                        alt={story.name}
+                        fill
+                        className="object-cover"
+                        unoptimized
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                    </>
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary)]/60 flex items-center justify-center">
+                      <span className="text-4xl font-bold text-white opacity-20">
+                        {story.name
+                          .split(" ")
+                          .map((n) => n[0])
+                          .join("")}
+                      </span>
+                    </div>
+                  )}
                 </div>
 
                 <div className="p-6 flex flex-col flex-grow">

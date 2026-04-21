@@ -28,16 +28,29 @@ export function StoryTemplate({ story }: { story: StoryData }) {
         <div className="max-w-5xl mx-auto mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Image */}
-            <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden bg-gradient-to-br from-[var(--color-primary)]/20 to-[var(--color-surface)]">
-              <Image
-                src={story.imageUrl}
-                alt={story.name}
-                fill
-                className="object-cover"
-                priority
-                unoptimized
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+            <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden bg-gradient-to-br from-[var(--color-primary)]/20 to-[var(--color-surface)] flex items-center justify-center">
+              {story.imageUrl ? (
+                <>
+                  <Image
+                    src={story.imageUrl}
+                    alt={story.name}
+                    fill
+                    className="object-cover"
+                    priority
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                </>
+              ) : (
+                <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary)]/60 flex items-center justify-center">
+                  <span className="text-8xl font-bold text-white opacity-20">
+                    {story.name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .join("")}
+                  </span>
+                </div>
+              )}
             </div>
 
             {/* Info */}
