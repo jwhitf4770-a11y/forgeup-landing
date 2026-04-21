@@ -33,8 +33,8 @@ export function Nav() {
           <Link href="/stories" className="text-sm text-[var(--color-muted)] hover:text-white hidden md:inline transition-colors">
             Stories
           </Link>
-          <Link href="/blog/training-for-a-powerlifting-meet-with-milo" className="text-sm text-[var(--color-muted)] hover:text-white hidden md:inline transition-colors">
-            For Athletes
+          <Link href="/blog" className="text-sm text-[var(--color-muted)] hover:text-white hidden md:inline transition-colors">
+            Blog
           </Link>
           <Link href="/setup" className="text-sm text-[var(--color-muted)] hover:text-white hidden md:inline transition-colors">
             Get Your Setup
