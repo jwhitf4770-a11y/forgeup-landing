@@ -9,8 +9,7 @@ export const stories: Record<string, StoryData> = {
     location: "Austin, TX",
     discipline: "Strength Training",
     frequency: "4 days/week",
-    imageUrl:
-      "https://source.unsplash.com/600x800/?man,gym,lifting,strength",
+    imageUrl: "",
     pullQuote: "Six years off. I thought I was starting over. Milo said I was starting different.",
     problem:
       "After six years away from the gym—raising kids, life happening—Marcus wanted to jump back in. His benchmark was 225 squat. But his body had adapted. His nervous system had reset. His connective tissue had reorganized around a sedentary life. Every coach he consulted said the same thing: you're starting from scratch. Milo didn't.",
@@ -52,8 +51,7 @@ export const stories: Record<string, StoryData> = {
     location: "Sacramento, CA",
     discipline: "Powerlifting",
     frequency: "6 days/week",
-    imageUrl:
-      "https://source.unsplash.com/600x800/?woman,powerlifting,strength,gym",
+    imageUrl: "",
     pullQuote: "My squat was stalled. Milo didn't fix my squat. He fixed my recovery.",
     problem:
       "Dana's squat was stuck at 295 for six weeks. She wanted to add volume. More squat days. Harder sessions. More accessories. The standard move: if something isn't working, attack it harder. But Milo saw something different: a recovery debt from adjacent training.",
@@ -95,8 +93,7 @@ export const stories: Record<string, StoryData> = {
     location: "Boulder, CO",
     discipline: "Run + Lift",
     frequency: "5-6 days/week",
-    imageUrl:
-      "https://source.unsplash.com/600x800/?man,running,athlete,fitness",
+    imageUrl: "",
     pullQuote: "I wanted to do it all. Milo taught me sequencing beats volume.",
     problem:
       "James runs marathons and lifts heavy. Both equally. The problem: his body can't recover from a 16-mile long run Saturday and a full leg day Sunday. Most coaches make him pick. Milo didn't. He made him sequence.",
@@ -138,8 +135,7 @@ export const stories: Record<string, StoryData> = {
     location: "Portland, OR",
     discipline: "Strength Training",
     frequency: "4 days/week",
-    imageUrl:
-      "https://source.unsplash.com/600x800/?woman,strength,training,mature",
+    imageUrl: "",
     pullQuote: "At 54, I finally know what I want. Milo made it possible.",
     problem:
       "Carol is 54 and wants to deadlift 200 pounds. She's been training consistently for two years at 135. A 65-pound jump. Most people would see age and conservative goals. Milo saw a 14-week window and solid foundation.",
@@ -181,8 +177,7 @@ export const stories: Record<string, StoryData> = {
     location: "Charlotte, NC",
     discipline: "Multi-Sport",
     frequency: "3-4 days/week",
-    imageUrl:
-      "https://source.unsplash.com/600x800/?man,athlete,track,running",
+    imageUrl: "",
     pullQuote: "I used to be fast. Milo reminded me that 'used to' doesn't matter. Right now does.",
     problem:
       "Troy played D2 football 12 years ago. Ran a 4.7 forty. He wanted to 'get back to where he was.' But 12 years of different training, different body composition, different neural patterns mean the body he has now isn't a rusty version of the body he had. It's a different body entirely.",
@@ -224,8 +219,7 @@ export const stories: Record<string, StoryData> = {
     location: "Denver, CO",
     discipline: "Obstacle Racing",
     frequency: "4 days/week",
-    imageUrl:
-      "https://source.unsplash.com/600x800/?woman,obstacle,racing,fitness",
+    imageUrl: "",
     pullQuote: "I signed up for a race with six weeks left. Milo didn't start over. He redirected.",
     problem:
       "Priya signed up for a Spartan Sprint with six weeks to go. She'd been doing general strength training—compound lifts, cardio. It's solid. But a Spartan is different. Carries, holds, obstacles, and short-burst conditioning. Her program was good for something else entirely.",
@@ -267,8 +261,7 @@ export const stories: Record<string, StoryData> = {
     location: "Boulder, CO",
     discipline: "5 Disciplines",
     frequency: "10-11 sessions/week",
-    imageUrl:
-      "https://source.unsplash.com/600x800/?man,training,exercise,multi-sport",
+    imageUrl: "",
     pullQuote: "Every coach said pick one. Milo made five coexist.",
     problem:
       "Czar does five things: barbell lifting, CrossFit, trail running, rock climbing, boxing. Not hobbies. Equal pursuits. He's genuinely excellent at all of them. And he refuses to pick a primary. Every coach says that's impossible. Milo says it's a math problem.",
