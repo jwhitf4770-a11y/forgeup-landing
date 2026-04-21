@@ -105,13 +105,14 @@ Expected response:
 {"success":true}
 ```
 
-### 5. View CRM Dashboard
+### 5. View Signups
 
-The CRM is available at `/crm`. Currently, it reads from Supabase without authentication (accessible to anyone).
-
-**To add authentication:**
-1. Set up Supabase Auth in your project
-2. Update the CRM page to check `supabase.auth.getSession()` before loading data
+Use **Supabase Dashboard** to view all signups:
+1. Go to your Supabase project dashboard
+2. Select **Tables** in the left sidebar
+3. Click `beta_signups` or `trainer_signups` to see submissions
+4. Click any row to view full details
+5. Edit status directly in the dashboard (pending → reviewed → approved/rejected)
 
 ## Database Schema
 
