@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 export default function WaitlistPage() {
   const [email, setEmail] = useState("");
   const [platform, setPlatform] = useState<"ios" | "android" | null>(null);
+  const [goal, setGoal] = useState<"general" | "event" | null>(null);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
     "idle",
   );
@@ -20,7 +21,7 @@ export default function WaitlistPage() {
       const res = await fetch("/api/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, platform }),
+        body: JSON.stringify({ email, platform, goal }),
       });
       if (!res.ok) throw new Error(await res.text());
       setStatus("success");
@@ -36,11 +37,10 @@ export default function WaitlistPage() {
       <Nav />
       <section className="px-6 py-24 max-w-xl mx-auto">
         <h1 className="font-display text-4xl md:text-5xl font-bold mb-4">
-          Get early access.
+          Tell Milo what you&rsquo;re after.
         </h1>
         <p className="text-[var(--color-muted)] mb-8">
-          Drop your email. We&apos;ll send you the invite when Milo is ready for
-          you. No spam. No drip. One email, one link.
+          He&rsquo;ll build around it from day one. Drop your email and we&rsquo;ll send your invite.
         </p>
 
         {status === "success" ? (
@@ -52,6 +52,28 @@ export default function WaitlistPage() {
           </div>
         ) : (
           <form onSubmit={onSubmit} className="space-y-4">
+            <div>
+              <label className="block text-sm font-semibold mb-3">What&rsquo;s your main training goal?</label>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { value: "general" as const, label: "Get stronger / look better / feel healthier" },
+                  { value: "event" as const, label: "I have a meet, race, or event" },
+                ].map((g) => (
+                  <button
+                    key={g.value}
+                    type="button"
+                    onClick={() => setGoal(g.value)}
+                    className={`py-3 px-4 rounded-xl font-medium text-sm transition-all text-left ${
+                      goal === g.value
+                        ? "bg-[var(--color-primary)] text-black"
+                        : "bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text)] hover:border-[var(--color-primary)]"
+                    }`}
+                  >
+                    {g.label}
+                  </button>
+                ))}
+              </div>
+            </div>
             <div>
               <label className="block text-sm font-semibold mb-3">Which platform?</label>
               <div className="flex gap-3">

@@ -4,16 +4,20 @@ const faqs = [
     a: "Fitbod and Hevy give you rigid templates or blank logs. ForgeUp gives you a coach who builds a plan with you, then adjusts it mid-week when life happens. The program is the conversation.",
   },
   {
-    q: "Do I need an Apple Watch?",
-    a: "No. ForgeUp works as a pure phone app. The Watch and WearOS apps just make set logging hands-free.",
+    q: "Do I need a specific goal to start?",
+    a: "No. &ldquo;I want to feel better and look better&rdquo; is a complete goal. Milo will ask what that means to you and build from there. You don&rsquo;t need a meet on the calendar or a number in mind.",
+  },
+  {
+    q: "Can Milo program for a competition or event?",
+    a: "Yes. Give him the date and the event — powerlifting meet, Spartan race, marathon, whatever — and he back-plans from race day. He manages the peaking block, the taper, and all the adjustments in between.",
   },
   {
     q: "What if I get injured?",
     a: "Tell Milo. He&rsquo;ll swap exercises in real time, rework your week, and keep the rest of your program coherent.",
   },
   {
-    q: "Can Milo build for specific goals?",
-    a: "Yes — strength, hypertrophy, cut, recomp, or a blend. Just describe what you&rsquo;re after. He&rsquo;ll ask follow-ups.",
+    q: "Do I need an Apple Watch?",
+    a: "No. ForgeUp works as a pure phone app. The Watch and WearOS apps just make set logging hands-free.",
   },
   {
     q: "How does the trial work?",

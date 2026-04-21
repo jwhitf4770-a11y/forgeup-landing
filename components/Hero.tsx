@@ -23,16 +23,13 @@ export function Hero() {
               <span className="text-[var(--color-primary)]">iron.</span>
             </h1>
             <p className="text-lg md:text-2xl text-[var(--color-text)] leading-snug max-w-xl mb-4 font-semibold">
-              Tell Milo your week changed. He rewrites your program before you
-              leave the couch.
+              Whatever you&rsquo;re training for, Milo builds the program. Then he rewrites it every time life changes.
             </p>
             <p className="text-base md:text-lg text-[var(--color-muted)] leading-relaxed max-w-xl mb-3">
-              ForgeUp is a conversational AI strength coach. Milo knows your
-              full training history — every set, every missed session, every
-              complaint — and that context never resets.
+              General fitness. Powerlifting meet. Spartan race. Wanting to deadlift 200 by your birthday. Milo doesn&rsquo;t care which one — he just builds around it and adjusts as you go.
             </p>
             <p className="text-sm md:text-base text-[var(--color-muted)] leading-relaxed max-w-xl mb-9">
-              He pushes you, you push back — both of you get sharper.
+              No templates. No intake forms. Full context, every session, forever.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link href="/waitlist" className="btn-primary">
@@ -131,14 +128,14 @@ function PhoneMockup() {
             <div className="flex-1 space-y-3 text-sm overflow-hidden">
               <div className="flex justify-end">
                 <div className="bg-[var(--color-primary)] text-black rounded-2xl rounded-br-sm px-3 py-2 max-w-[80%] font-medium">
-                  Skip leg day today?
+                  I have a powerlifting meet Oct 18th
                 </div>
               </div>
               <div className="flex justify-start">
                 <div className="bg-[var(--color-surface)] border border-[var(--color-border)] border-l-2 border-l-[var(--color-primary)]/50 rounded-2xl rounded-bl-sm px-3 py-2 max-w-[90%]">
                   <div className="text-[10px] text-[var(--color-primary)] font-semibold mb-0.5">Milo</div>
                   <span className="type-line" style={{ ["--type-width" as string]: "100%" }}>
-                    You&apos;ve missed four sessions. We&apos;re not pretending that didn&apos;t happen.
+                    25 weeks out. We&rsquo;re starting the accumulation block Monday.
                   </span>
                 </div>
               </div>

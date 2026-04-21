@@ -2,17 +2,17 @@ const steps = [
   {
     num: "01",
     title: "Tell Milo what you want",
-    body: "Strength, size, hybrid, longevity — say it in your own words. He asks the follow-ups.",
+    body: "Stronger, leaner, ready for a meet, or just consistent — say it in your own words. He asks the follow-ups and builds around a real deadline if you have one.",
   },
   {
     num: "02",
-    title: "He builds your first week",
-    body: "No templates. No 40-field intake. A program sized to your gear, your history, and what hurts today.",
+    title: "He builds your program",
+    body: "Not a template. A program sized to your goal, your gear, your schedule, and what hurts right now. Event in October? He back-plans from race day.",
   },
   {
     num: "03",
-    title: "You lift. You log. He rewrites.",
-    body: "Every set feeds back. Skipped a session? Hit a PR? Tweaked something? The plan moves with you.",
+    title: "You lift. You talk. He adjusts.",
+    body: "Every session feeds back. Skipped a week? Hit a PR? Race moved to spring? Tell him. The plan moves with you — not the other way around.",
   },
 ];
 

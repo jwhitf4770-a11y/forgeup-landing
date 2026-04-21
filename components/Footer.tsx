@@ -17,7 +17,7 @@ export function Footer() {
             <span className="font-display font-bold text-lg">ForgeUp</span>
           </div>
           <p className="text-sm text-[var(--color-muted)] leading-relaxed">
-            Iron sharpens iron. Milo sharpens you.
+            Iron sharpens iron. Milo sharpens you — whatever you&rsquo;re training for.
           </p>
         </div>
 
@@ -25,6 +25,7 @@ export function Footer() {
           heading="Product"
           links={[
             { label: "How Milo works", href: "#how-it-works" },
+            { label: "For Athletes", href: "/blog/training-for-a-powerlifting-meet-with-milo" },
             { label: "Pricing", href: "#pricing" },
             { label: "FAQ", href: "#faq" },
             { label: "Join Beta", href: "/waitlist" },

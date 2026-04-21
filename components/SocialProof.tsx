@@ -71,6 +71,32 @@ const avatars: Avatar[] = [
     quote:
       "I told Milo I used to run a 4.7 forty. He said, “That was twelve years ago. What&rsquo;s your current 400m time?” I didn&rsquo;t know. He said, “That&rsquo;s where we start.”",
   },
+  {
+    archetype: "The Race Convert",
+    name: "Priya S.",
+    city: "Austin, TX",
+    age: 29,
+    role: "Product designer . started as general fitness . signed up for a Spartan Sprint",
+    initials: "PS",
+    glyph: <FlagGlyph />,
+    style: { bg: "#1a1a20", text: "#ff6b35", ring: true, border: true },
+    pain: "Started with no specific goal. Now has a race in 6 weeks and doesn't know if her program still applies.",
+    win: "Told Milo about the race. He restructured without losing the strength base she'd built.",
+    quote: "I told Milo I signed up for a Spartan race kind of on a dare. He said, \"Okay, six weeks. Here's what changes and here's what stays.\" I expected him to start over. He didn't.",
+  },
+  {
+    archetype: "The Polymath Athlete",
+    name: "Marcus &ldquo;Czar&rdquo; W.",
+    city: "Boulder, CO",
+    age: 38,
+    role: "Fitness entrepreneur . lifter . CrossFit . runner . climber . boxer . refuses to choose",
+    initials: "CZ",
+    glyph: <StarGlyph />,
+    style: { bg: "linear-gradient(135deg, #1a1a20 0%, #1a1a20 50%, #0a4a8f 50%, #0a4a8f 100%)", text: "#ffd700", ring: true },
+    pain: "Every coach forces a choice: pick your primary sport. He wants to master five simultaneously.",
+    win: "Milo threads the recovery budget across all five disciplines without sacrificing any.",
+    quote: "Every program I've tried says pick one. Milo said, tell me all five and I'll make them coexist. That's the difference between software and a coach.",
+  },
 ];
 
 type Avatar = {
@@ -242,6 +268,22 @@ function ShieldGlyph() {
   return (
     <svg viewBox="0 0 20 20" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" className="text-[var(--color-primary)]">
       <path d="M10 3 L16 5 V10 C16 13 13 16 10 17 C7 16 4 13 4 10 V5 Z" />
+    </svg>
+  );
+}
+
+function FlagGlyph() {
+  return (
+    <svg viewBox="0 0 20 20" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-primary)]">
+      <path d="M4 3 v14 M4 3 h9 l-2 4 h3 l-2 4 H4" />
+    </svg>
+  );
+}
+
+function StarGlyph() {
+  return (
+    <svg viewBox="0 0 20 20" width="12" height="12" fill="currentColor" className="text-[#ffd700]">
+      <path d="M10 1 L13 8 L20 8 L15 12 L17 19 L10 15 L3 19 L5 12 L0 8 L7 8 Z" />
     </svg>
   );
 }

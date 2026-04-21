@@ -32,6 +32,14 @@ interface BlogPost {
 
 const posts: BlogPost[] = [
   {
+    slug: "training-for-a-powerlifting-meet-with-milo",
+    title: "Training for a Powerlifting Meet When Life Refuses to Cooperate",
+    excerpt:
+      "You have a meet in October. Your job changed, your training partner quit, and you missed three weeks. Here's what Milo does with that — and what you need to tell him.",
+    date: "2026-04-20",
+    category: "Competition",
+  },
+  {
     slug: "milo-adaptive-programs",
     title: "How Milo Adapts Your Program in Real Time",
     excerpt:

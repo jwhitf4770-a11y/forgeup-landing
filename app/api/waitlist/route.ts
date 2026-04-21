@@ -3,9 +3,10 @@ import { supabaseAdmin } from "@/lib/supabase";
 
 export async function POST(req: NextRequest) {
   try {
-    const { email, platform } = (await req.json()) as {
+    const { email, platform, goal } = (await req.json()) as {
       email?: string;
       platform?: "ios" | "android";
+      goal?: "general" | "event";
     };
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -18,7 +19,7 @@ export async function POST(req: NextRequest) {
 
     const { error } = await supabaseAdmin
       .from("beta_signups")
-      .insert([{ email, platform }])
+      .insert([{ email, platform, goal }])
       .single();
 
     if (error) {

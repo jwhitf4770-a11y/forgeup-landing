@@ -30,8 +30,8 @@ export function Nav() {
           <a href="#faq" className="text-sm text-[var(--color-muted)] hover:text-white hidden md:inline transition-colors">
             FAQ
           </a>
-          <Link href="/partners" className="text-sm text-[var(--color-muted)] hover:text-white hidden md:inline transition-colors">
-            Partner (V2)
+          <Link href="/blog/training-for-a-powerlifting-meet-with-milo" className="text-sm text-[var(--color-muted)] hover:text-white hidden md:inline transition-colors">
+            For Athletes
           </Link>
           <Link href="/waitlist" className="btn-primary text-sm !py-2 !px-4">
             Try Free
