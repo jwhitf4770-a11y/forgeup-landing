@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BetaSignupInline } from "@/components/BetaSignupInline";
 
 export function Hero() {
   return (
@@ -31,16 +32,9 @@ export function Hero() {
             <p className="text-sm md:text-base text-[var(--color-muted)] leading-relaxed max-w-xl mb-9">
               No templates. No intake forms. Full context, every session, forever.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Link href="/waitlist" className="btn-primary">
-                Start 14-day free trial
-              </Link>
-              <a href="#how-it-works" className="btn-secondary">
-                See Milo in action
-              </a>
-            </div>
-            <p className="mt-3 text-sm text-[var(--color-primary)]/90">
-              Already running a program? Milo works around it.
+            <BetaSignupInline className="max-w-md" />
+            <p className="mt-3 text-sm text-[var(--color-muted)]">
+              No credit card · <a href="#how-it-works" className="text-[var(--color-primary)]/80 hover:text-[var(--color-primary)] underline underline-offset-2">See Milo in action</a>
             </p>
             <div className="mt-6 flex flex-wrap gap-3 items-center">
               <span className="text-sm text-[var(--color-muted)] font-medium">Coming to:</span>

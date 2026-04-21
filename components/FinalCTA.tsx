@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { BetaSignupInline } from "@/components/BetaSignupInline";
 
 export function FinalCTA() {
   return (
@@ -33,14 +33,7 @@ export function FinalCTA() {
           Fourteen days on the house. Bring your barbell, your injuries, and
           your excuses. He&rsquo;ll handle the last part first.
         </p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <Link href="/waitlist" className="btn-primary">
-            Start 14-day free trial
-          </Link>
-          <a href="#demo" className="btn-secondary">
-            See Milo coach a real session
-          </a>
-        </div>
+        <BetaSignupInline className="max-w-md mx-auto" />
         <p className="mt-5 text-sm text-[var(--color-muted)]">
           No credit card · cancel anytime · your history stays yours
         </p>
