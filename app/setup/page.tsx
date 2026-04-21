@@ -79,33 +79,33 @@ export default function SetupPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-2">What equipment do you have access to?</label>
+                <label className="block text-sm font-medium mb-2">Describe your setup & training context</label>
                 <textarea
                   value={equipment}
                   onChange={(e) => setEquipment(e.target.value)}
-                  placeholder="e.g., Full rack, dumbbells (5-90 lbs), bench, pullup bar, plates, resistance bands..."
+                  placeholder="e.g., Home gym with rack + dumbbells 5-90 lbs. Previous programs: 5/3/1, GZCLP. Injury history: shoulder impingement 2020. Current volume: 4 days/week."
                   className="w-full px-4 py-2 bg-[var(--color-bg-secondary)] border border-[var(--color-border)] rounded-lg focus:outline-none focus:border-[var(--color-primary)] min-h-[120px]"
                   rows={4}
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-2">Upload photos</label>
+                <label className="block text-sm font-medium mb-2">Upload photos & screenshots</label>
                 <p className="text-xs text-[var(--color-muted)] mb-4">
-                  Share photos of your gym setup, equipment, recent workouts, or training logs. This helps Milo understand your constraints.
+                  Share photos of your gym setup, equipment, recent workouts, training logs, or screenshots of previous programs. Milo learns your constraints, injuries, and what's worked before.
                 </p>
                 <div className="border-2 border-dashed border-[var(--color-border)] rounded-lg p-6 text-center hover:border-[var(--color-primary)] transition-colors">
                   <input
                     type="file"
                     multiple
-                    accept="image/*"
+                    accept="image/*,.pdf"
                     onChange={handleFileChange}
                     className="hidden"
                     id="file-upload"
                   />
                   <label htmlFor="file-upload" className="cursor-pointer">
                     <div className="text-sm text-[var(--color-muted)] mb-2">Click to upload or drag and drop</div>
-                    <div className="text-xs text-[var(--color-muted)]">PNG, JPG, GIF up to 10MB</div>
+                    <div className="text-xs text-[var(--color-muted)]">Screenshots, PNG, JPG, GIF, PDF up to 10MB each</div>
                   </label>
                 </div>
                 {files.length > 0 && (
