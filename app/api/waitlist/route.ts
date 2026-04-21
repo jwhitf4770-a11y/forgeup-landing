@@ -1,15 +1,39 @@
 import { NextRequest, NextResponse } from "next/server";
+import { supabaseAdmin } from "@/lib/supabase";
 
-// TODO: wire to ConvertKit / Resend / Loops. For now, log to server console.
 export async function POST(req: NextRequest) {
   try {
-    const { email } = (await req.json()) as { email?: string };
+    const { email, platform } = (await req.json()) as {
+      email?: string;
+      platform?: "ios" | "android";
+    };
+
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return new NextResponse("Invalid email", { status: 400 });
     }
-    console.log(`[waitlist] new signup: ${email} at ${new Date().toISOString()}`);
+
+    if (!platform || !["ios", "android"].includes(platform)) {
+      return new NextResponse("Invalid platform", { status: 400 });
+    }
+
+    const { error } = await supabaseAdmin
+      .from("beta_signups")
+      .insert([{ email, platform }])
+      .single();
+
+    if (error) {
+      if (error.code === "23505") {
+        return new NextResponse("Email already registered", { status: 400 });
+      }
+      throw error;
+    }
+
+    console.log(
+      `[beta] new signup: ${email} (${platform}) at ${new Date().toISOString()}`
+    );
     return NextResponse.json({ ok: true });
-  } catch {
-    return new NextResponse("Bad request", { status: 400 });
+  } catch (err) {
+    console.error("Waitlist API error:", err);
+    return new NextResponse("Internal server error", { status: 500 });
   }
 }
