@@ -11,7 +11,7 @@ export function Hero() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--color-primary)]/40 bg-[var(--color-primary)]/10">
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)] animate-pulse" />
             <span className="eyebrow !text-[11px]">
-              Conversational strength coach · Proverbs 27:17
+              As iron sharpens iron · Proverbs 27:17
             </span>
           </div>
         </div>
