@@ -554,6 +554,48 @@ export const competitors: Record<string, StoryData> = {
     outcome:
       "Maya slowed her deficit, kept training stable, ramped cardio in weeks 16-4. She hit stage lean, full, and hard. Second show was better condition than her first. The secret wasn't more work—it was the right timing.",
   },
+
+  "jackson-w-crossfit-games": {
+    slug: "jackson-w-crossfit-games",
+    archetype: "CrossFit Games",
+    name: "Jackson W.",
+    age: 31,
+    location: "Austin, TX",
+    discipline: "CrossFit",
+    frequency: "6 days/week",
+    imageUrl: "https://images.pexels.com/photos/3775593/pexels-photo-3775593.jpeg",
+    pullQuote: "Qualified for Games. Thought I needed to train harder than everyone else. Milo taught me smarter was faster.",
+    problem:
+      "Jackson made it to the CrossFit Games as a first-timer. Six months to prepare. He trained obsessively—two-a-days, high volume, grinding. His power output stayed flat. His recovery collapsed. His motivation tanked. He thought more would fix it.",
+    conversation: [
+      {
+        from: "user",
+        text: "Games in six months. I'm doing two-a-days most days. Should I add a third session?",
+      },
+      {
+        from: "milo",
+        text: "What's your sleep and calories right now?",
+      },
+      {
+        from: "user",
+        text: "Six hours sleep. Eating maintenance maybe.",
+      },
+      {
+        from: "milo",
+        text: "You're already broken. Adding a session breaks you worse. Sleep goes to eight, calories go up 500. Your current volume stays—one session per day. Power comes back, then you add density.",
+      },
+      {
+        from: "user",
+        text: "But Games is the biggest stage...",
+      },
+      {
+        from: "milo",
+        text: "Exactly. You don't overreach. You need to show up fresh and recovered. That's how you compete at the highest level.",
+      },
+    ],
+    outcome:
+      "Jackson backed off the volume, prioritized sleep and food. Strength recovered. His power output climbed. Games day: he placed 47th in his first year. Not top 10, but stable. Six months later he knew what to fix. Year two: top 25. The lesson took a year to land, but it landed because his foundation was solid.",
+  },
 };
 
 export function getStoryBySlug(slug: string): StoryData | undefined {
