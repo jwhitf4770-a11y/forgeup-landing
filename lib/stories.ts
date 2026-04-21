@@ -299,7 +299,6 @@ export const stories: Record<string, StoryData> = {
     outcome:
       "Czar kept all five disciplines. Same volume. Different structure. Intensity was sequenced. Recovery was allocated. Some days were strength-dominant. Some days were conditioning. Some days were skill. Within four weeks, soreness dropped 80%. Performance went up across all five. He wasn't doing less. He was doing impossible—but intelligently.",
   },
-};
 
   "sophie-m-functional-athlete": {
     slug: "sophie-m-functional-athlete",
